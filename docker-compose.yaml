@@ -34,7 +34,6 @@ services:
     restart: always
     build:
       context: ./nginx
-    image: ednelsonpupo/nginx
     container_name: nginx
     networks:
       - node-network
@@ -42,7 +41,6 @@ services:
       - 8080:80
     depends_on:
       - db
-      - app
 networks:
   node-network:
     driver: bridge
