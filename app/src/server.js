@@ -12,8 +12,8 @@ server.use(bodyParser.urlencoded({extended: false}))
 
 server.use('/api', routes)
 
-PessoaService.inserirPessoa()
 server.get('/', (req,res) => {
+    PessoaService.inserirPessoa()
     res.sendFile(__dirname + '/index.html')
 })
 
