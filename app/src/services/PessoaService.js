@@ -13,3 +13,9 @@ module.exports = {
         })
     }
 }
+
+module.exports = {
+    inserirPessoa: () => {
+        db.query(`INSERT INTO pessoa(nome) values('Ednelson')`)
+    }
+}

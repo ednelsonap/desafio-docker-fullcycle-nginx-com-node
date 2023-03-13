@@ -2,6 +2,7 @@ require('dotenv').config({path:'variaveis.env'})
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const PessoaService = require('./services/PessoaService')
 
 const routes = require('./routes')
 
@@ -11,6 +12,7 @@ server.use(bodyParser.urlencoded({extended: false}))
 
 server.use('/api', routes)
 
+PessoaService.inserirPessoa()
 server.get('/', (req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
